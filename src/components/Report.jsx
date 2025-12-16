@@ -2,7 +2,7 @@
 import React, { useEffect, useState } from 'react';
 import { Layout, Typography, Spin, Table, message, Button } from 'antd';
 import { useLocation, useNavigate } from 'react-router-dom';
-import cmtiImage from '../Assets/cmti_pic.png';
+import cmtiImage from '../assets/cmti_pic.png';
 import { getDailyReportURL, getWeeklyReportURL, API_ENDPOINTS, getShiftLiveHistoryURL, getTotalEnergyCostsURL, getDailyEnergyConsumptionURL, getGraphDataURL } from './apiEndpoints';
 import moment from 'moment';
 import { BarChart, CartesianGrid, XAxis, YAxis, Tooltip, Bar, LabelList } from 'recharts';
