@@ -1,0 +1,544 @@
+.auth-container {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(135deg, #001529 0%, #003366 100%);
+    position: relative;
+    overflow: hidden;
+}
+
+.content-wrapper {
+    position: relative;
+    z-index: 1;
+    width: 100%;
+    max-width: 420px;
+    padding: 20px;
+}
+
+.auth-card {
+    backdrop-filter: blur(10px);
+    background: #ffffff !important;
+    border-radius: 15px !important;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1) !important;
+}
+
+.machine-container {
+    width: 600px;
+    height: 600px;
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(5px);
+    border-radius: 20px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.auth-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: 
+        linear-gradient(rgba(0, 21, 41, 0.9), rgba(0, 21, 41, 0.7)),
+        url('https://images.unsplash.com/photo-1581092160562-40aa08e78837?auto=format&fit=crop&q=80') center/cover no-repeat;
+    opacity: 0.3;
+    animation: pulse 4s infinite;
+}
+
+@keyframes pulse {
+    0% {
+        opacity: 0.15;
+    }
+    50% {
+        opacity: 0.2;
+    }
+    100% {
+        opacity: 0.15;
+    }
+}
+
+.logo-container {
+    text-align: center;
+    margin-top: 12px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 40px;
+}
+
+.cmti-logo {
+    width: 80px;
+    height: auto;
+    object-fit: contain;
+    filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.1));
+}
+
+.auth-header {
+    text-align: center;
+    margin-bottom: 2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.auth-title {
+    color: #2c3e50 !important;
+    margin-bottom: 0.5rem !important;
+    font-size: 26px !important;
+    font-weight: 700 !important;
+    white-space: nowrap !important;
+    letter-spacing: -0.5px !important;
+    background: linear-gradient(45deg, #1a237e, #0288d1) !important;
+    -webkit-background-clip: text !important;
+    -webkit-text-fill-color: transparent !important;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.1) !important;
+}
+
+.auth-subtitle {
+    color: #7f8c8d;
+    font-size: 16px !important;
+    margin-top: 8px !important;
+}
+
+.auth-form {
+    margin-top: 1.5rem;
+}
+
+.auth-input {
+    border-radius: 8px !important;
+    border: 1px solid #e0e0e0 !important;
+}
+
+.auth-button {
+    height: 45px !important;
+    border-radius: 8px !important;
+    background: linear-gradient(135deg, #00b4db 0%, #0083b0 100%) !important;
+    border: none !important;
+    box-shadow: 0 4px 15px rgba(0, 180, 219, 0.2) !important;
+    transition: all 0.3s ease !important;
+}
+
+.auth-button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(0, 180, 219, 0.3) !important;
+}
+
+.auth-links {
+    text-align: center;
+    margin-top: 1rem;
+}
+
+.auth-link {
+    color: #00b4db !important;
+    font-weight: 500;
+}
+
+.auth-link:hover {
+    color: #0083b0 !important;
+}
+
+/* Energy monitoring background elements */
+.energy-grid {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-image: 
+        linear-gradient(to right, rgba(0, 180, 219, 0.1) 1px, transparent 1px),
+        linear-gradient(to bottom, rgba(0, 180, 219, 0.1) 1px, transparent 1px);
+    background-size: 50px 50px;
+    animation: gridMove 20s linear infinite;
+}
+
+.energy-particles {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    overflow: hidden;
+}
+
+.energy-particle {
+    position: absolute;
+    width: 4px;
+    height: 4px;
+    background: #00b4db;
+    border-radius: 50%;
+    animation: particleFloat 3s infinite;
+}
+
+/* Create multiple particles with different positions and animations */
+.energy-particle:nth-child(1) { left: 10%; top: 20%; animation-delay: 0s; }
+.energy-particle:nth-child(2) { left: 20%; top: 40%; animation-delay: 0.5s; }
+.energy-particle:nth-child(3) { left: 30%; top: 60%; animation-delay: 1s; }
+.energy-particle:nth-child(4) { left: 40%; top: 80%; animation-delay: 1.5s; }
+.energy-particle:nth-child(5) { left: 50%; top: 30%; animation-delay: 2s; }
+.energy-particle:nth-child(6) { left: 60%; top: 50%; animation-delay: 2.5s; }
+.energy-particle:nth-child(7) { left: 70%; top: 70%; animation-delay: 3s; }
+.energy-particle:nth-child(8) { left: 80%; top: 90%; animation-delay: 3.5s; }
+
+@keyframes gridMove {
+    0% {
+        transform: translateY(0);
+    }
+    100% {
+        transform: translateY(50px);
+    }
+}
+
+@keyframes particleFloat {
+    0% {
+        transform: translateY(0) scale(1);
+        opacity: 0.8;
+    }
+    50% {
+        transform: translateY(-20px) scale(1.5);
+        opacity: 0.4;
+    }
+    100% {
+        transform: translateY(0) scale(1);
+        opacity: 0.8;
+    }
+}
+
+/* Multiple Machine Animations */
+.machine-animation,
+.machine-animation-2,
+.machine-animation-3,
+.machine-animation-4,
+.gear {
+    position: absolute;
+    object-fit: contain;
+    pointer-events: none;
+    filter: drop-shadow(0 0 10px rgba(0, 180, 219, 0.3));
+}
+
+.machine-animation {
+    bottom: 10%;
+    right: 5%;
+    width: 300px;
+    height: 300px;
+    opacity: 0.25;
+    animation: float 6s ease-in-out infinite;
+    z-index: 1;
+}
+
+.machine-animation-2 {
+    top: 10%;
+    left: 5%;
+    width: 250px;
+    height: 250px;
+    opacity: 0.25;
+    animation: floatReverse 8s ease-in-out infinite;
+    z-index: 1;
+}
+
+.machine-animation-3 {
+    bottom: 15%;
+    left: 10%;
+    width: 280px;
+    height: 280px;
+    opacity: 0.25;
+    animation: bounce 10s ease-in-out infinite;
+    z-index: 1;
+}
+
+.machine-animation-4 {
+    top: 15%;
+    right: 10%;
+    width: 220px;
+    height: 220px;
+    opacity: 0.25;
+    animation: rotate 15s linear infinite;
+    z-index: 1;
+}
+
+.gear {
+    opacity: 0.2;
+    z-index: 1;
+}
+
+.gear-1 {
+    top: 25%;
+    right: 35%;
+    width: 120px;
+    height: 120px;
+    animation: spinClockwise 20s linear infinite;
+}
+
+.gear-2 {
+    top: 35%;
+    right: 30%;
+    width: 80px;
+    height: 80px;
+    animation: spinCounterClockwise 15s linear infinite;
+}
+
+/* Animation Keyframes */
+@keyframes float {
+    0% {
+        transform: translateY(0px) rotate(0deg);
+    }
+    50% {
+        transform: translateY(-20px) rotate(5deg);
+    }
+    100% {
+        transform: translateY(0px) rotate(0deg);
+    }
+}
+
+@keyframes floatReverse {
+    0% {
+        transform: translateY(0px) rotate(0deg);
+    }
+    50% {
+        transform: translateY(20px) rotate(-5deg);
+    }
+    100% {
+        transform: translateY(0px) rotate(0deg);
+    }
+}
+
+@keyframes bounce {
+    0%, 100% {
+        transform: translateY(0) scale(1);
+    }
+    50% {
+        transform: translateY(-15px) scale(1.05);
+    }
+}
+
+@keyframes rotate {
+    0% {
+        transform: rotate(0deg) translateY(0px);
+    }
+    25% {
+        transform: rotate(90deg) translateY(10px);
+    }
+    50% {
+        transform: rotate(180deg) translateY(0px);
+    }
+    75% {
+        transform: rotate(270deg) translateY(-10px);
+    }
+    100% {
+        transform: rotate(360deg) translateY(0px);
+    }
+}
+
+@keyframes spinClockwise {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes spinCounterClockwise {
+    from {
+        transform: rotate(360deg);
+    }
+    to {
+        transform: rotate(0deg);
+    }
+}
+
+/* Add glowing effect to machines */
+.machine-animation,
+.machine-animation-2,
+.machine-animation-3,
+.machine-animation-4 {
+    filter: drop-shadow(0 0 15px rgba(66, 165, 245, 0.3));
+}
+
+.gear {
+    filter: drop-shadow(0 0 10px rgba(66, 165, 245, 0.2));
+}
+
+/* Enhance visibility on hover */
+.machine-animation:hover,
+.machine-animation-2:hover,
+.machine-animation-3:hover,
+.machine-animation-4:hover,
+.gear:hover {
+    opacity: 0.4;
+    transition: opacity 0.3s ease;
+}
+
+/* Add connection lines */
+.connection-lines {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 0;
+    opacity: 0.05;
+    background: 
+        linear-gradient(45deg, transparent 48%, #00b4db 49%, #00b4db 51%, transparent 52%),
+        linear-gradient(-45deg, transparent 48%, #00b4db 49%, #00b4db 51%, transparent 52%);
+    background-size: 60px 60px;
+    animation: moveLines 20s linear infinite;
+}
+
+@keyframes moveLines {
+    from {
+        background-position: 0 0;
+    }
+    to {
+        background-position: 60px 60px;
+    }
+}
+
+/* Energy monitoring graph animation */
+.graph-animation {
+    position: absolute;
+    left: -50px;
+    top: 50%;
+    width: 300px;
+    height: 150px;
+    opacity: 0.1;
+    z-index: 1;
+}
+
+.graph-line {
+    stroke: #00b4db;
+    stroke-width: 2;
+    fill: none;
+    animation: graphDraw 3s infinite;
+}
+
+@keyframes graphDraw {
+    0% {
+        stroke-dasharray: 1000;
+        stroke-dashoffset: 1000;
+    }
+    100% {
+        stroke-dasharray: 1000;
+        stroke-dashoffset: 0;
+    }
+}
+
+@keyframes slideUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Add floating labels */
+.ant-form-item-label {
+    padding: 0;
+    line-height: 1.5;
+}
+
+.ant-form-item-label > label {
+    color: #64748b;
+    font-weight: 500;
+}
+
+/* Style the icons */
+.anticon {
+    color: #94a3b8;
+}
+
+/* Add responsive styles */
+@media (max-width: 480px) {
+    .auth-card {
+        padding: 24px !important;
+    }
+    
+    .auth-title {
+        font-size: 24px !important;
+    }
+    
+    .auth-subtitle {
+        font-size: 14px;
+    }
+}
+
+/* Additional styles for the select dropdown */
+.auth-select .ant-select-selector {
+    height: 48px !important;
+    padding: 8px 16px !important;
+    border-radius: 12px !important;
+    border: 2px solid #e2e8f0 !important;
+}
+
+.auth-select .ant-select-selection-item {
+    line-height: 32px !important;
+}
+
+.auth-select:hover .ant-select-selector,
+.auth-select.ant-select-focused .ant-select-selector {
+    border-color: #3b82f6 !important;
+    box-shadow: 0 0 0 2px rgba(59, 130, 246, 0.1) !important;
+}
+
+@media (max-width: 1200px) {
+    .content-wrapper {
+        flex-direction: column;
+    }
+
+    .machine-container {
+        width: 100%;
+        max-width: 420px;
+        height: 300px;
+    }
+}
+
+@media (max-width: 768px) {
+    .auth-container {
+        padding: 20px;
+    }
+    
+    .auth-card {
+        width: 100%;
+    }
+
+    .machine-container {
+        display: none;
+    }
+}
+
+.machine-illustration {
+    width: 600px;
+    height: 600px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+.machine-illustration img {
+    max-width: 100%;
+    height: auto;
+    object-fit: contain;
+    filter: drop-shadow(0 20px 40px rgba(0, 0, 0, 0.1));
+    transition: transform 0.3s ease;
+}
+
+.machine-illustration img:hover {
+    transform: translateY(-10px);
+}
+
+@media (max-width: 1200px) {
+    .machine-illustration {
+        width: 400px;
+        height: 400px;
+    }
+}
+
+@media (max-width: 768px) {
+    .machine-illustration {
+        display: none;
+    }
+}

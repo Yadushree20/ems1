@@ -1,0 +1,132 @@
+.navbar-container {
+    background: #ffffff;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    width: 100%;
+  }
+  
+  .navbar-content {
+    width: 100%;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    height: 64px;
+    background-color: #2c6e49;
+  }
+  
+  .navbar-brand {
+    margin-right: auto;
+    min-width: 200px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    cursor: pointer;
+  }
+  
+  .brand-icon {
+    font-size: 24px;
+    color: white;
+  }
+  
+  .brand-text {
+    font-size: 18px;
+    font-weight: 600;
+    color: white;
+  }
+  
+  .main-menu {
+    flex: 0 1 auto;
+    display: flex;
+    justify-content: center;
+    border-bottom: none;
+    background: transparent;
+    color: white;
+    margin: 0 24px;
+  }
+  
+  .main-menu .ant-menu-item {
+    padding: 0 15px;
+    margin: 0 4px;
+    color: white !important;
+  }
+  
+  .main-menu .ant-menu-item:hover {
+    color: #e0e0e0 !important;
+  }
+  
+  .main-menu .ant-menu-item-selected {
+    background-color: rgba(255, 255, 255, 0.1) !important;
+  }
+  
+  .navbar-right {
+    min-width: 200px;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 16px;
+    margin-left: 20px;
+  }
+  
+  .profile-button {
+    color: white !important;
+  }
+  
+  .username {
+    margin-left: 8px;
+    color: white;
+  }
+  
+  /* Profile Dropdown Styles */
+  .profile-dropdown {
+    width: 280px;
+    padding: 16px;
+  }
+  
+  .profile-header {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    padding: 8px;
+  }
+  
+  .logout-item {
+    color: #e53e3e;
+  }
+  
+  .logout-item:hover {
+    background: #fff5f5;
+  }
+
+  /* Enhanced Profile Avatar Styles */
+  .profile-avatar {
+    border: 2px solid white;
+    transition: all 0.3s ease;
+    background: linear-gradient(135deg, #1a237e, #0288d1) !important;
+  }
+
+  .profile-avatar:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 15px rgba(255, 255, 255, 0.2);
+  }
+
+  .profile-dropdown-trigger {
+    display: flex;
+    align-items: center;
+    padding: 4px 12px;
+    border-radius: 20px;
+    transition: all 0.3s ease;
+    background: rgba(255, 255, 255, 0.1);
+  }
+
+  .profile-dropdown-trigger:hover {
+    background: rgba(255, 255, 255, 0.2);
+  }
+
+  .profile-avatar-text {
+    font-size: 20px;
+    font-weight: bold;
+    color: white;
+  }

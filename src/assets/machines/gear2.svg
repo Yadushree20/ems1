@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="800px" height="800px" viewBox="0 0 100 100" version="1.1" xmlns="http://www.w3.org/2000/svg">
+    <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <path d="M50 20 L53 23 L53 28 L56 31 L61 31 L64 34 L61 37 L61 42 L64 45 L61 48 L56 48 L53 51 L53 56 L50 59 L47 56 L47 51 L44 48 L39 48 L36 45 L39 42 L39 37 L36 34 L39 31 L44 31 L47 28 L47 23 Z" 
+              fill="#757575"/>
+        <circle cx="50" cy="40" r="12" fill="#616161"/>
+        <circle cx="50" cy="40" r="6" fill="#42A5F5"/>
+    </g>
+</svg> 

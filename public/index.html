@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Energy Monitoring Dashboard</title>
+  <script>
+    // Handle video loading errors
+    document.addEventListener('DOMContentLoaded', function() {
+      const videos = document.querySelectorAll('video');
+      videos.forEach(video => {
+        video.addEventListener('error', function() {
+          // If video fails to load, set a fallback background color or image
+          this.style.backgroundColor = '#000';
+          this.poster = '/fallback-poster.jpg';
+          console.log('Video error handled: ' + this.src);
+        });
+      });
+
+      // Handle other asset loading errors
+      window.addEventListener('error', function(e) {
+        if (e.target.tagName === 'IMG' || e.target.tagName === 'VIDEO' || e.target.tagName === 'SOURCE') {
+          console.log('Resource loading error handled: ' + e.target.src);
+          e.preventDefault(); // Prevent the error from appearing in console
+        }
+      }, true);
+    });
+  </script>
+</head>
+<body>
+  <div id="root"></div>
+  <script type="module" src="/src/main.jsx"></script>
+</body>
+</html> 

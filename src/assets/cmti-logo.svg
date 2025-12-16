@@ -1,0 +1,11 @@
+Energy Monitoring System<?xml version="1.0" encoding="UTF-8"?>
+<svg width="200" height="80" viewBox="0 0 200 80" version="1.1" xmlns="http://www.w3.org/2000/svg">
+    <g fill="none" fill-rule="evenodd">
+        <path d="M20,20 L35,20 L35,60 L20,60 L20,20 Z M40,20 L55,20 L55,60 L40,60 L40,20 Z M60,20 L75,20 L75,60 L60,60 L60,20 Z M80,20 L95,20 L95,60 L80,60 L80,20 Z" 
+              fill="#0066B3" 
+              fill-rule="nonzero"/>
+        <path d="M100,20 L180,20 L180,35 L165,35 L165,60 L150,60 L150,35 L135,35 L135,60 L120,60 L120,35 L100,35 L100,20 Z" 
+              fill="#0066B3" 
+              fill-rule="nonzero"/>
+    </g>
+</svg> 
