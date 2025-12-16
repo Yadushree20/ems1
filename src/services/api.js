@@ -2,7 +2,7 @@ import axios from 'axios';
 import { authService } from './authService';
 
 const api = axios.create({
-  baseURL: 'http://172.18.7.91:9900'
+  baseURL: 'https://emsapi.cmti.online'
 });
 
 // Add token to all requests

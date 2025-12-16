@@ -1,7 +1,7 @@
 import moment from 'moment';
 import axios from 'axios';
 
-const BASE_URL = 'http://172.18.7.91:9900';
+const BASE_URL = 'https://emsapi.cmti.online';
 
 export const API_ENDPOINTS = {
   MACHINES: `${BASE_URL}/machines/`,
@@ -316,7 +316,7 @@ export const getMachineStatusURL = (date) => {
 export const fetchAllMachineStates = async () => {
   try {
     // Using direct endpoint with CORS headers
-    const response = await fetch('http://172.18.7.91:9900/all_machine_states', {
+    const response = await fetch('https://emsapi.cmti.online/all_machine_states', {
       method: 'GET',
       headers: {
         'Content-Type': 'application/json',

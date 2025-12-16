@@ -58,7 +58,7 @@ function MachineDetails() {
   const fetchProductionData = async (date) => {
     try {
       // Use the direct endpoint for Mazak H-400
-      const requestUrl = `http://172.18.7.91:9900/prod_graph/get_production_data?machine_id=${machineId}&date=${moment(date).format('YYYY-MM-DD')}`;
+      const requestUrl = `https://emsapi.cmti.online/prod_graph/get_production_data?machine_id=${machineId}&date=${moment(date).format('YYYY-MM-DD')}`;
       console.log('Fetching production data from URL:', requestUrl);
       
       const response = await fetch(requestUrl);

@@ -2,7 +2,7 @@ import axios from 'axios';
 
 const getBaseUrl = () => {
     // Always use HTTP regardless of environment
-    return 'http://172.18.7.91:9900';
+    return 'https://emsapi.cmti.online';
 };
   
 export const backendApi = axios.create({

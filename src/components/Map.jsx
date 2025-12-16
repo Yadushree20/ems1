@@ -19,7 +19,7 @@ function Map() {
   useEffect(() => {
     const fetchEnergyData = async () => {
       try {
-        const response = await fetch('http://172.18.7.91:9900/energy_summary/');
+        const response = await fetch('https://emsapi.cmti.online/energy_summary/');
         
         if (!response.ok) {
           throw new Error(`HTTP error! status: ${response.status}`);

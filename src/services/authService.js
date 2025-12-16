@@ -1,6 +1,6 @@
 import axios from 'axios';
 
-const BASE_URL = 'http://172.18.7.91:9900';
+const BASE_URL = 'https://emsapi.cmti.online';
 
 export const authService = {
   async register({ email, username, password, role, adminPassKey }) {
